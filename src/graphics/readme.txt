@@ -1,2 +1,0 @@
-- photoshop background from “who wants to be a millionaire” to “making a millionaire”
-- perhaps different shop background
