@@ -1,33 +1,31 @@
-import 'phaser';
-import MainScene from './scenes/mainScene';
-import PreloadScene from './scenes/preloadScene';
-import GameConfig = Phaser.Types.Core.GameConfig;
-
-const DEFAULT_WIDTH = 400;
-const DEFAULT_HEIGHT = 400;
-
-
-const config: GameConfig = {
-    backgroundColor: '#ffffff',
-    scale: {
-        parent: 'phaser-game',
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: DEFAULT_WIDTH,
-        height: DEFAULT_HEIGHT
-    },
-    scene: [PreloadScene, MainScene],
-    physics: {
-        default: 'arcade',
-        arcade: {
-            debug: false,
-            gravity: { y: 400 }
+window.onload =  function() {
+    var config = {
+        width: 800,
+        height: 600,
+        bakckgroundColor: 0x000000,
+        scene: [Scene1, Scene2, Scene3, Scene4],
+        pixelArt: true,
+        physics: {
+            default: "arcade",
+            arcade: {
+                debug: false
+            }
         }
     }
-};
+    var game = new Phaser.Game(config);
 
-window.addEventListener('load', () => {
-    window['game'] = new Phaser.Game(config);
-});
+    game.registry.set("score", 1000)
+    game.registry.set("streak", 0)
+    game.registry.set("fifty", 0)
+    game.registry.set("audience", 0)
+    game.registry.set("questionNumber",0)
+    game.registry.set("investment",0)
 
-//
+
+    /*
+    export var flags = {
+        questionsAttempted = 0,
+        currentScore = 0,
+        currentStreak = 0
+    }*/
+}
