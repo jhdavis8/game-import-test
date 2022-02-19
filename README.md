@@ -1,6 +1,6 @@
 # educational-phaser-game-template
 
-Template for designing educational Phaser Games
+Template for designing educational Phaser Games. Currently archived and not actively developed.
 
 # Important Files
 
